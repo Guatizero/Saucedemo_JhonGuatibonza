@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CopilotDiffPersistence">
+    <option name="pendingDiffs">
+      <map>
+        <entry key="$PROJECT_DIR$/src/test/java/tasks/AddProduct.java">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/src/test/java/tasks/AddProduct.java" />
+              <option name="originalContent" value="package tasks;&#10;&#10;import io.cucumber.java.be.I;&#10;import net.serenitybdd.screenplay.Actor;&#10;import net.serenitybdd.screenplay.Task;&#10;import net.serenitybdd.screenplay.Tasks;&#10;import net.serenitybdd.screenplay.actions.Click;&#10;import org.openqa.selenium.WebDriver;&#10;import userinterfaces.HomePage;&#10;import userinterfaces.ItemPage;&#10;&#10;public class AddProduct implements Task {&#10;    private final String item;&#10;&#10;    public AddProduct(String item) {&#10;        this.item = item;&#10;    }&#10;    WebDriver driver;&#10;&#10;    @Override&#10;    public &lt;T extends Actor&gt; void performAs(T actor) {&#10;        actor.attemptsTo(&#10;            Click.on(HomePage.SELECT_ITEM_BUTTON.of(item)),&#10;            Click.on(ItemPage.ADD_ITEM_BUTTON),&#10;            Click.on(ItemPage.BACK_TO_PRODUCTS_BUTTON)&#10;        );&#10;    }&#10;&#10;    public static AddProduct toCart(String item) {&#10;        return Tasks.instrumented(AddProduct.class, item);&#10;    }&#10;}&#10;" />
+              <option name="updatedContent" value="package tasks;&#10;&#10;import io.cucumber.java.be.I;&#10;import net.serenitybdd.screenplay.Actor;&#10;import net.serenitybdd.screenplay.Task;&#10;import net.serenitybdd.screenplay.Tasks;&#10;import net.serenitybdd.screenplay.actions.Click;&#10;import org.openqa.selenium.WebDriver;&#10;import userinterfaces.HomePage;&#10;import userinterfaces.ItemPage;&#10;&#10;public class AddProduct implements Task {&#10;    private final String item;&#10;&#10;    public AddProduct(String item) {&#10;        this.item = item;&#10;    }&#10;    WebDriver driver;&#10;&#10;    @Override&#10;    public &lt;T extends Actor&gt; void performAs(T actor) {&#10;        actor.attemptsTo(&#10;            Click.on(HomePage.SELECT_ITEM_BUTTON.of(item)),&#10;            Click.on(ItemPage.ADD_ITEM_BUTTON),&#10;            Click.on(ItemPage.BACK_TO_PRODUCTS_BUTTON)&#10;        );&#10;    }&#10;&#10;    public static AddProduct toCart(String item) {&#10;        return Tasks.instrumented(AddProduct.class, item);&#10;    }&#10;}" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

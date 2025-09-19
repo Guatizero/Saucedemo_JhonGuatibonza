@@ -1,0 +1,62 @@
+defaultTasks 'clean', 'test', 'aggregate'
+
+group = 'com.saucedemo'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
+buildscript {
+    repositories {
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+    }
+    dependencies {
+        classpath "net.serenity-bdd:serenity-gradle-plugin:4.2.1"
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: "net.serenity-bdd.serenity-gradle-plugin"
+
+sourceCompatibility = 17
+targetCompatibility = 17
+
+dependencies {
+    testImplementation "net.serenity-bdd:serenity-core:4.2.1"
+    testImplementation "net.serenity-bdd:serenity-cucumber:4.2.1"
+    testImplementation "net.serenity-bdd:serenity-screenplay:4.2.1"
+    testImplementation "net.serenity-bdd:serenity-screenplay-webdriver:4.2.1"
+    testImplementation "net.serenity-bdd:serenity-ensure:4.2.1"
+    testImplementation "org.junit.platform:junit-platform-launcher:1.11.0"
+    testImplementation "io.cucumber:cucumber-junit-platform-engine:7.16.1"
+    testImplementation "org.junit.platform:junit-platform-suite:1.11.0"
+    testImplementation "org.junit.jupiter:junit-jupiter-engine:5.11.0"
+    testImplementation "org.junit.vintage:junit-vintage-engine:5.11.0"
+    implementation "ch.qos.logback:logback-classic:1.2.10"
+    testImplementation "org.assertj:assertj-core:3.23.1"
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}
+
+tasks.withType(Test) {
+    systemProperty "file.encoding", "UTF-8"
+}
+
+test {
+    useJUnitPlatform()
+}
+
+clean.doLast {
+    delete 'target'
+}
+
+gradle.startParameter.continueOnFailure = true
+test.finalizedBy(aggregate)
