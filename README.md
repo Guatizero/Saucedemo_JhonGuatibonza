@@ -262,23 +262,6 @@ serenity.report.encoding=UTF-8
 serenity.logging=VERBOSE
 ```
 
-### serenity.conf
-
-```hocon
-environments {
-  default {
-    webdriver.base.url = "https://www.saucedemo.com"
-  }
-  
-  chrome {
-    webdriver.driver = chrome
-  }
-  
-  firefox {
-    webdriver.driver = firefox
-  }
-}
-```
 
 ### Variables de Entorno
 
@@ -294,21 +277,6 @@ export CHROME_OPTIONS="--headless"
 ```
 
 ## 🚨 Solución de Problemas Comunes
-
-### Error: "Actor cannot browse the web"
-```java
-// ✅ Solución: Asegurar que el actor tenga la habilidad
-usuario.can(BrowseTheWeb.with(webDriver));
-```
-
-### Error: "The of() method is not supported for By-type Targets"
-```java
-// ❌ Incorrecto
-Target.the("elemento").located(By.id("id")).of(producto)
-
-// ✅ Correcto
-Target.the("elemento").locatedBy("#id")
-```
 
 ### Error: Carpeta target no se limpia
 ```java
@@ -338,7 +306,7 @@ clean.doLast {
 
 Para dudas, problemas o sugerencias:
 
-- 📧 **Email:** [email del equipo]
+- 📧 **Email:** jhon.guatibonza@sofka.com.co
 - 🐛 **Issues:** Crear un issue en GitHub
 - 📚 **Documentación:** [Serenity BDD Docs](https://serenity-bdd.info/)
 
