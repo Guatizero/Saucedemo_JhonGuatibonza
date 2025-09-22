@@ -1,0 +1,65 @@
+================================================================================
+                    CONCLUSIONES Y HALLAZGOS DEL PROYECTO SAUCEDEMO
+                     Automatización con Serenity BDD y Screenplay
+================================================================================
+
+PROYECTO: Automatización de pruebas E2E para SauceDemo
+TECNOLOGÍAS: Java 17, Serenity BDD, Gradle, Cucumber
+
+================================================================================
+1. RESUMEN
+================================================================================
+
+El proyecto logró automatizar el flujo principal de compra en SauceDemo, desde el
+inicio de sesión hasta la confirmación de la compra. Se utilizó un enfoque
+estructurado que facilita la comprensión y el mantenimiento del código.
+
+Estado actual: FUNCIONAL Y OPERATIVO
+Cobertura: Flujo completo de compra
+
+================================================================================
+2. PRINCIPALES LOGROS
+================================================================================
+
+- Automatización exitosa del proceso de compra.
+- Código organizado y fácil de entender.
+- Reportes automáticos con evidencia visual (capturas de pantalla).
+- Separación clara de responsabilidades en el código.
+- Facilidad para agregar nuevos productos o escenarios.
+
+================================================================================
+3. DIFICULTADES Y SOLUCIONES
+================================================================================
+
+- Se presentaron retos con la configuración inicial y la interacción con algunos
+elementos de la página, que se resolvieron ajustando la estructura y los selectores.
+- Se mejoró la limpieza automática de archivos temporales y la generación de reportes.
+- La gestión de dependencias se optimizó para evitar conflictos.
+- Se realizo la generación del escenario de prueba con Cucumber para mejorar la
+legibilidad y mantenimiento del código.
+
+================================================================================
+4. OPCIONES DE MEJORA APRENDIDAS
+================================================================================
+
+- Usar archivos de datos externos (como Excel o JSON) para facilitar la gestión de
+diferentes escenarios y usuarios.
+- Agregar más validaciones, por ejemplo, verificar precios o cantidades.
+- Probar el flujo con diferentes tipos de usuario.
+- Mejorar la robustez ante cambios en la página, usando selectores más flexibles.
+- Explorar la integración con herramientas de integración continua (CI/CD) para
+automatizar aún más el proceso.
+
+================================================================================
+5. CONCLUSIÓN FINAL
+================================================================================
+
+El proyecto cumple con el objetivo de automatizar el flujo de compra de manera clara
+y ordenada. El código es fácil de mantener y ampliar. Las mejoras sugeridas
+permitirán que el framework sea aún más útil y adaptable a futuros cambios o
+necesidades.
+
+================================================================================
+DOCUMENTO PARA EVALUACIÓN TÉCNICA
+Responsable Técnico: Jhon Guatibonza
+================================================================================
